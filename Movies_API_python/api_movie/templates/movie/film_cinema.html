@@ -1,0 +1,74 @@
+﻿{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+<title>电影选购</title>
+<link href="{% static 'css/film_cinema.css' %}" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="{% static 'js/jquery-1.7.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/phone.js' %}"></script>
+</head>
+
+<body>
+<div class="whole">
+
+	<header class="header">
+        <a href="javascript:history.back(-1)" class="fa fa-angle-left"></a>
+        <span class="names">{{ datas.0.movie_name }} </span>
+    </header>
+    
+    <div class="film_content">
+    	<div class="tab">
+        	<ul>
+            	<li class="active">附近<i class="fa fa-caret-down"></i></li>
+                <li>区域<i class="fa fa-caret-down"></i></li>
+                <li>服务<i class="fa fa-caret-down"></i></li>
+                <li>其他<i class="fa fa-caret-down"></i></li>
+            </ul>
+        </div>
+        <div class="address">
+        	<ul>
+                {% for data in datas %}
+                    <li>
+                        <a href="{% url 'cinemas_detail' data.movie_base_id data.cinema_id %}">
+                            <div class="film_addr">
+                                <span>{{ data.cinema_name }}</span>
+                                <p>{{ data.price }}<span>元起</span></p>
+                                {% if  data.cinema_id < 2 %}
+                                    <span class="resort">常去影院</span>
+                                {% endif %}
+
+                            </div>
+                            <div class="det_addr">
+                                <span>{{ data.address }}</span>
+                                <p>{{ data.distance }}km</p>
+                            </div>
+                            <div class="session">近期场次：14:20|15:20|16:20|17:20|18:20|19:20|20:20|21:20|22:20</div>
+                        </a>
+                    </li>
+                {% endfor %}
+                
+                <li>
+                	<a href="tickets.html">
+                        <div class="film_addr">
+                            <span>北京耀莱成龙国际影城(临河里店)</span>
+                            <p>40<span>元起</span></p>
+                        </div>
+                        <div class="det_addr">
+                            <span>通州区梨园南街北京华联常营购物中心西4F6686</span>
+                            <p>16.77km</p>
+                        </div>
+                        <div class="session">近期场次：14:20|15:20|16:20|17:20|18:20|19:20|20:20|21:20|22:20</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    
+</div>
+</body>
+</html>

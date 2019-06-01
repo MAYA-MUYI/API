@@ -9,11 +9,11 @@
 * 使用scrapy获取三家信息
 * 按城市-影院-场次-票价分层查询
 
-##1. 流程
+## 1. 流程
 >选择影片-> 查看详细 -> 选择影院 -> 选择位置 -> 确认支付 -> 返回订单
 
-#2. 接口简介
-###2.1. 获取电影列表
+# 2. 接口简介
+### 2.1. 获取电影列表
 >__URL : GET /movies/__
 
 __I. 查看成功响应信息__
@@ -119,7 +119,7 @@ __II. 响应参数说明__
 
 
 
-###2.3 获取电影院列表
+### 2.3 获取电影院列表
 
 >__GET cinemas/movie_id__
 
@@ -168,7 +168,7 @@ Vary: Accept
 | distance    | string      | 电影院距离     |
 
 
-###2.4 获取订单基础信息
+### 2.4 获取订单基础信息
 
 >__GET cinemas/movie_base_id/cinema_id__
 
@@ -205,41 +205,41 @@ __II. 响应参数说明__
 | price    | string      | 价格     |
 | duration    | string      | 电影长度     |
 
-###2.5 获取城市、区域列表接口
+### 2.5 获取城市、区域列表接口
 >完善中......
 
 ###2.6 其他接口
 >开发中......
 
-##3. 页面
-###3.1 主页（查看电影）
+## 3. 页面
+### 3.1 主页（查看电影）
 
 ![image.png](https://upload-images.jianshu.io/upload_images/7415868-bddc7d368ffa1f09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-###3.2 电影详情页
+### 3.2 电影详情页
 
 ![image.png](https://upload-images.jianshu.io/upload_images/7415868-f6e3177323b50008.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###3.3 影院选择页面
+### 3.3 影院选择页面
 
 ![image.png](https://upload-images.jianshu.io/upload_images/7415868-02292d2d38084fa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###3.4 场次选择页面
+### 3.4 场次选择页面
 
 ![image.png](https://upload-images.jianshu.io/upload_images/7415868-d57989d73fd6bc09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###3.5 座位选择页面
+### 3.5 座位选择页面
 
 ![image.png](https://upload-images.jianshu.io/upload_images/7415868-69d8b0f0c8238b09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###3.6 订单返回页面
+### 3.6 订单返回页面
 >开发中...
 
-###3.7用户页面
+### 3.7用户页面
 >开发中
 
-##4. 项目运行方式
+## 4. 项目运行方式
 
 ~~~
 git clone ......
